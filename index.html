@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Journal</title>
   <link rel="icon" href="images/favicon.ico">
-  <link
-    rel="stylesheet"
-    crossorigin="anonymous"
+  <link rel="stylesheet" crossorigin="anonymous"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==">
   <link rel="stylesheet" href="css/reset.css">
@@ -15,11 +13,59 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<div class="masterdiv1 hidden">
   <header>
+    <div class="top-header1">
+      <h3 class="codejournal">Code Journal</h3>
+    </div>
   </header>
+  <div data-view="entry-form" class="container">
+    <form id="form">
+      <h2 class="header">New Entry</h2>
+      <div class="row">
+        <div class="column-half img-container">
+          <img src="./images/placeholder-image-square.jpg" alt="placeholder-image-square" class="photoUrl">
+        </div>
+        <div class="column-half inputfields">
+          <label for="title">Title</label>
+          <input required id="title" name="title" type="text" class="input">
+          <label for="photo-url">Photo URL</label>
+          <input required id="photo-url" name="photo-url" type="url" class="input">
+        </div>
+      </div>
+      <div class="column-full notefields">
+        <label for="notes">Notes</label>
+        <textarea required name="notes" id="notes" class="text-area"></textarea>
+      </div>
+      <button type="submit" class="save">SAVE</button>
+    </form>
+  </div>
   <main>
   </main>
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
+</div>
+<div class="masterdiv2">
+  <header>
+    <div class="navbar container">
+      <h3 class="top-header2">Code Journal</h3>
+      <nav>
+        <a class="anchor-entries" href="#">Entries</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div data-view="entries" class="entries">
+      <div class="container">
+        <div class="main-header">
+          <h2>Entries</h2>
+          <button class="new">NEW</button>
+        </div>
+        <ul class="journal-entry">
+        </ul>
+      </div>
+    </div>
+  </main>
+  </div>
 </body>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
 </html>

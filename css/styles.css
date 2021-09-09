@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  background-color: rgb(51, 4, 114);
+}
+
+.top-header1 {
+  max-width: 900px;
+  margin: auto;
+}
+
+.codejournal {
+  color: white;
+  font-weight: 300;
+  padding: 20px 0;
+  margin: 0 2.2rem;
+}
+
+.img-container {
+  margin-bottom: 20px;
+}
+
+.photoUrl {
+  width: 100%;
+}
+
+.inputfields {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+
+.input {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  height: 35px;
+}
+
+.notefields {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+
+.text-area {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  height: 150px;
+}
+
+.save {
+  background-color: rgb(51, 4, 114);
+  border: none;
+  color: white;
+  padding: 7px 14px;
+  border-radius: 4px;
+  float: right;
+  margin-right: 0.75rem;
+}
+
+/* issue 2 */
+
+.navbar {
+  display: flex;
+  margin: auto;
+}
+
+nav {
+  margin: auto 20px;
+}
+
+.top-header2 {
+  color: white;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new {
+  height: 30px;
+  background-color: rgb(51, 4, 114);
+  border: none;
+  color: white;
+  border-radius: 4px;
+  padding: 0 12px;
+}
+
+.journal-entry {
+  list-style: none;
+  padding-left: 0;
+}
+
+.column-ful {
+  display: flex;
+}
+
+img {
+  width: 100%;
+}
