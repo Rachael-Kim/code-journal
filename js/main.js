@@ -51,10 +51,20 @@ function addEntry(entry) {
   $textDiv.appendChild($paragraph1);
   $header.appendChild($headerText);
   $paragraph1.appendChild($textNode1);
+  return $list;
 
-  var $ul = document.querySelector('.journal-entry');
-  $ul.appendChild($list);
 }
+
+for (const entry of data.entries) {
+  var $ul = document.querySelector('.journal-entry');
+  $ul.appendChild(addEntry(entry));
+}
+
+window.addEventListener('DOMContentLoaded', function (event) {
+  for (const entry of data.entries) {
+    addEntry(entry);
+  }
+});
 
 var $newButton = document.querySelector('.new');
 $newButton.addEventListener('click', function (event) {

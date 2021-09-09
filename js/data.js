@@ -7,18 +7,7 @@ var data = {
   nextEntryId: 1
 };
 
-window.addEventListener('DOMContentLoaded', function (event) {
-  var storageData = JSON.parse(localStorage.getItem('data'));
-  if (storageData.entries === null) {
-    storageData.entries = data.entries;
-  } else {
-    data.entries = storageData.entries;
-  }
-  for (const entry of storageData.entries) {
-    // eslint-disable-next-line no-undef
-    addEntry(entry);
-  }
-});
+data = JSON.parse(localStorage.getItem('data'));
 
 window.addEventListener('beforeunload', function (event) {
   localStorage.setItem('data', JSON.stringify(data));
