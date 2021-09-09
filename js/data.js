@@ -8,18 +8,18 @@ var data = {
 };
 
 window.addEventListener('DOMContentLoaded', function (event) {
-  var storageEntries = JSON.parse(localStorage.getItem('entries'));
-  if (storageEntries === null) {
-    storageEntries = data.entries;
+  var storageData = JSON.parse(localStorage.getItem('data'));
+  if (storageData.entries === null) {
+    storageData.entries = data.entries;
   } else {
-    data.entries = storageEntries;
+    data.entries = storageData.entries;
   }
-  for (const entry of storageEntries) {
+  for (const entry of storageData.entries) {
     // eslint-disable-next-line no-undef
     addEntry(entry);
   }
 });
 
 window.addEventListener('beforeunload', function (event) {
-  localStorage.setItem('entries', JSON.stringify(data.entries));
+  localStorage.setItem('data', JSON.stringify(data));
 });
