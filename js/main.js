@@ -22,14 +22,11 @@ formEntry.addEventListener('submit', function (event) {
   data.nextEntryId++;
   imgPlaceholder.setAttribute('src', './images/placeholder-image-square.jpg');
   formEntry.reset();
-  localStorage.setItem('data', JSON.stringify(data));
   addEntry(entry);
   var $masterdiv2 = document.querySelector('.masterdiv2');
   var $masterdiv1 = document.querySelector('.masterdiv1');
   $masterdiv2.classList.remove('hidden');
   $masterdiv1.classList.add('hidden');
-
-  localStorage.setItem('current', 'masterdiv2');
 });
 
 // issue 2
@@ -59,22 +56,6 @@ function addEntry(entry) {
   $ul.appendChild($list);
 }
 
-window.addEventListener('DOMContentLoaded', function (event) {
-  var $masterdiv2 = document.querySelector('.masterdiv2');
-  var $masterdiv1 = document.querySelector('.masterdiv1');
-  for (const entry of data.entries) {
-    addEntry(entry);
-  }
-  var current = localStorage.getItem('current');
-  if (current === 'masterdiv1') {
-    $masterdiv1.classList.remove('hidden');
-    $masterdiv2.classList.add('hidden');
-  } else {
-    $masterdiv2.classList.remove('hidden');
-    $masterdiv1.classList.add('hidden');
-  }
-});
-
 var $newButton = document.querySelector('.new');
 $newButton.addEventListener('click', function (event) {
   event.preventDefault();
@@ -82,6 +63,4 @@ $newButton.addEventListener('click', function (event) {
   var $masterdiv1 = document.querySelector('.masterdiv1');
   $masterdiv2.classList.add('hidden');
   $masterdiv1.classList.remove('hidden');
-
-  localStorage.setItem('current', 'masterdiv1');
 });
