@@ -19,10 +19,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .header {
-    padding: 0 0.75rem;
-  }
-
   .container {
     max-width: 900px;
   }
@@ -36,7 +32,11 @@
     width: 50%;
   }
 
-  .text-area {
-    height: 100px;
+  li {
+    display: flex;
+  }
+
+  .main-header {
+    padding: 0 0.75rem;
   }
 }
