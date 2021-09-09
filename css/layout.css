@@ -19,6 +19,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .header {
+    padding: 0 0.75rem;
+  }
+
   .container {
     max-width: 900px;
   }
@@ -30,5 +34,9 @@
 
   .column-half {
     width: 50%;
+  }
+
+  .text-area {
+    height: 100px;
   }
 }
