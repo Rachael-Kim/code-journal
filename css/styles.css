@@ -107,10 +107,21 @@ a {
   padding-left: 0;
 }
 
+.pen-icon {
+  color: rgb(51, 4, 114);
+}
+
 .column-ful {
   display: flex;
 }
 
 img {
   width: 100%;
+}
+
+/* issue 3 */
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
 }
