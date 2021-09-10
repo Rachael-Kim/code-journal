@@ -23,7 +23,8 @@ var saveFunction = function (event) {
   data.nextEntryId++;
   imgPlaceholder.setAttribute('src', './images/placeholder-image-square.jpg');
   formEntry.reset();
-  addEntry(entry);
+  var $ul = document.querySelector('.journal-entry');
+  $ul.prepend(addEntry(entry));
   var $masterdiv2 = document.querySelector('.masterdiv2');
   var $masterdiv1 = document.querySelector('.masterdiv1');
   $masterdiv2.classList.remove('hidden');
