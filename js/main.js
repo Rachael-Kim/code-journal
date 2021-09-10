@@ -83,9 +83,40 @@ function addEntry(entry) {
     notes.value = editingEntry.notes;
     imgPlaceholder.setAttribute('src', imgInput.value);
     formEntry.addEventListener('submit', updateFunction);
+    var $deleteEntry = document.querySelector('.deleteentry');
+    $deleteEntry.classList.remove('hidden');
   });
   return $list;
 }
+
+var $deleteEntry = document.querySelector('.deleteentry');
+$deleteEntry.addEventListener('click', function (event) {
+  var $modal = document.querySelector('.modal-overlay');
+  $modal.classList.remove('hidden');
+});
+
+var $cancel = document.querySelector('.cancel');
+$cancel.addEventListener('click', function (event) {
+  var $modal = document.querySelector('.modal-overlay');
+  $modal.classList.add('hidden');
+});
+
+var $confirmDelete = document.querySelector('.confirm');
+$confirmDelete.addEventListener('click', function (event) {
+  for (let i = 0; i < data.entries.length; i++) {
+    if (data.editing === data.entries[i].nextEntryId) {
+      data.entries.splice(i, 1);
+    }
+  }
+  var $modal = document.querySelector('.modal-overlay');
+  $modal.classList.add('hidden');
+  var $masterdiv2 = document.querySelector('.masterdiv2');
+  var $masterdiv1 = document.querySelector('.masterdiv1');
+  $masterdiv1.classList.add('hidden');
+  $masterdiv2.classList.remove('hidden');
+  var $deletingList = document.getElementById(`${data.editing}`);
+  $deletingList.remove();
+});
 
 for (const entry of data.entries) {
   var $ul = document.querySelector('.journal-entry');
