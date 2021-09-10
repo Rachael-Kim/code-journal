@@ -6,8 +6,9 @@ var data = {
   editing: null,
   nextEntryId: 1
 };
-
-data = JSON.parse(localStorage.getItem('data'));
+if (localStorage.getItem('data') !== null) {
+  data = JSON.parse(localStorage.getItem('data'));
+}
 
 window.addEventListener('beforeunload', function (event) {
   localStorage.setItem('data', JSON.stringify(data));
