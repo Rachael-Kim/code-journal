@@ -125,3 +125,65 @@ img {
   display: flex;
   justify-content: space-between;
 }
+
+/* issue 4 */
+
+.deleteentry {
+  color: red;
+  text-decoration: underline;
+}
+
+/* Modal */
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.wrapcontent {
+  background-color: white;
+  border-radius: 4px;
+  width: 400px;
+  margin: 50vh 50vw;
+  border: 1px solid rgba(136, 136, 136, 0.39);
+  position: absolute;
+  height: 150px;
+  margin-top: calc(50vh - 75px);
+  margin-left: calc(50vw - 200px);
+}
+
+.content {
+  margin-top: 35px;
+}
+
+.modal-alert {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 32px;
+}
+
+.cancel {
+  background-color: rgb(197, 191, 191);
+  color: rgba(0, 0, 0, 0.842);
+  border: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-weight: 750;
+}
+
+.confirm {
+  background-color: rgb(245, 45, 10);
+  color: white;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+}
